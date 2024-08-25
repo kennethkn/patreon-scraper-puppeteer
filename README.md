@@ -38,6 +38,8 @@ To install the necessary dependencies and login to Patreon, run:
 npm run setup
 ```
 
+After logging in, you can quit the browser safely.
+
 ## Usage
 
 ### Configuration
@@ -72,13 +74,18 @@ npm start
 
 ### Output
 
-The scraper saves the output in the `.mhtml` format. You can find the output file in the `dist` directory under a subdirectory named after the creator. For example, if the creator is `johndoe`, the output file will be located at:
+The scraper saves the output in the `.mhtml` format. You can find the output files in the `dist` directory under a subdirectory named after the creator and the timestamp. For example, if the creator is `johndoe`, the output files will be located at:
 
 ```plaintext
-dist/johndoe/index.mhtml
+dist /johndoe/<timestamp>/2024(23).mhtml
+dist /johndoe/<timestamp>/2023(49).mhtml
+dist /johndoe/<timestamp>/2022(42).mhtml
+...
 ```
 
-To open the `.mhtml` file, you can use a web browser like Google Chrome or Microsoft Edge. Simply drag and drop the file into the browser if clicking on it does not work.
+Each year is saved in a separate file as shown above, if `scrapeByYear` is set to `true`.
+
+To open a `.mhtml` file, you can use a web browser like Google Chrome or Microsoft Edge. Simply drag and drop the file into the browser if clicking on it does not work.
 
 ### Limitation
 
